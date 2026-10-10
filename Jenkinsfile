@@ -2,7 +2,7 @@
 pipeline {
     agent any
 
-    
+    stages {
         stage('Checkout GIT') {
             steps {
                 echo 'Pulling...'
@@ -13,9 +13,9 @@ pipeline {
 
         stage('Maven Check') {
             steps {
+                echo 'Checking Maven...'
                 sh 'mvn -version'
             }
-       
+        }
     }
 }
-
