@@ -10,5 +10,12 @@ pipeline {
                     url: 'https://github.com/Eya-Nakkaii/Jenkins-DevOps.git'
             }
         }
+
+        stage('Maven Check') {
+            steps {
+                sh 'mvn -version'
+            }
+        }
     }
 }
+
