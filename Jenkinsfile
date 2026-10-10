@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout GIT') {
+        stage('Checkout GIT SSSSSSSSS') {
             steps {
                 echo 'Pulling...'
                 git branch: 'main',
