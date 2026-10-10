@@ -3,17 +3,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Verification Git') {
+        stage('Checkout GIT') {
             steps {
-                checkout scm
-                sh 'ls -la'
-                sh 'cat README.md'
-            }
-        }
-
-        stage('Hello World') {
-            steps {
-                echo 'Hello World ! Jenkins et GitHub fonctionnent.'
+                echo 'Pulling...'
+                git branch: 'main',
+                    url: 'https://github.com/Eya-Nakkaii/Jenkins-DevOps.git'
             }
         }
     }
